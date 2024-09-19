@@ -1,29 +1,37 @@
-import SideBar from "./components/SideBar"
-import NavBar from "./components/NavBar"
-import Footer from "./components/Footer"
-import MainSection from "./components/MainSection"
-function App() {
+import SideBar from "./components/SideBar";
+import Footer from "./components/Footer";
+import List from "./components/List";
+import AboutPage from "./pages/AboutPage";
+import ItemDetailsPage from "./pages/ItemDetailsPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
+import { Route, Routes } from "react-router-dom";
+
+import React from "react";
+import DashboardPage from "./pages/DashboardPage";
+
+function App() {
   return (
     <>
-    <div className="container">
+      <div className="container">
         <div className="subcontainer">
-        <SideBar />
-        <MainSection/>
+          
+          <SideBar />
+          <List />
         </div>
-        <div>
-        <Footer
-        url = {`https://github.com/PatriNieto/react-recipe-book.git`}
-        />
-        </div>
-    </div>
-   
-    
-   
-   
-    
+        {/* <div>
+          <Footer url={`https://github.com/PatriNieto/react-recipe-book.git`} />
+        </div> */}
+
+        <Routes>
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/itemdetails/:recipeId" element={<ItemDetailsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

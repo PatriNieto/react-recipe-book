@@ -1,13 +1,21 @@
 import React from 'react'
 import imgLogo from '../assets/logo-react-Recipe.png'
+import { Link } from 'react-router-dom'
+
 
 const SideBar = () => {
   return (
       <div className='side-bar'>
-        <img src={imgLogo} alt="" />
+         
+         {/* <Link to="/"> */}
+         <img src={imgLogo} alt="" />
+       {/*   </Link> */}
+         
+         
+        
         <p>Starters</p>
         <p>Main Courses</p>
-        <p>Deserts</p>
+        <p>Desserts</p>
       </div>
   )
 }

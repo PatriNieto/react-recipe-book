@@ -1,32 +1,24 @@
-import recipes from "../data/recipes.json";
 import { useState } from "react";
-
+import { Link } from 'react-router-dom'
 import React from "react";
 
-const ListItem = () => {
-  const [recipesNuestro, setRecipe] = useState(recipes);
 
-  const handleDelete = (index) => {
-    console.log("removiendo elemento", index);
-    const clone = recipesNuestro.slice(0);
 
-    console.log("1", clone);
-    clone.splice(index, 1);
-    console.log(clone);
-    setRecipe(clone);
-  };
+function ListItem({elem, handleDelete}) {
+
+  const {name, image, calories, id} = elem
   return (
-    <div>
-      {recipesNuestro.map((elem, index) => (
-        <div key={index}>
-          <h1>{elem.name}</h1>
-          <img src={elem.image} alt="recipeFoto" />
-          <p>{elem.calories <= 350 ? "✅" : "❌"}</p>
-          <button onClick={() => handleDelete(index)}>Erase</button>
+    
+    <Link to={`/itemdetails/${id}`}>
+        <div key={elem.id} className="recipeDiv">
+          <h1>{name}</h1>
+          <img src={image} alt="recipeFoto" />
+          <p>{calories <= 350 ? "✅" : "❌"}</p>
+          <button onClick={() => handleDelete(index)}>Erase recipe</button>
         </div>
-      ))}
-    </div>
+   </Link>
+    
   );
-};
 
+}
 export default ListItem;

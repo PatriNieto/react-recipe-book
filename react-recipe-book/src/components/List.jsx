@@ -3,8 +3,9 @@ import recipes from "../data/recipes.json"
 import { useState } from "react";
 import React from "react";
 
+
 const List = () => {
-  const [recipesNuestro, setRecipe] = useState(recipes)
+  const [recipesNuestro, setRecipesNuestro] = useState(recipes)
   //la funcion va aqui!
   console.log(`maluuuuuuuu1`,recipesNuestro)
   
@@ -12,7 +13,7 @@ const List = () => {
   const handleDelete = (index) => {
     const clone = recipesNuestro.slice(0);
     clone.splice(index, 1);
-    setRecipe(clone);
+    setRecipesNuestro(clone);
   };
   return (
     <div className="recipesContainer">

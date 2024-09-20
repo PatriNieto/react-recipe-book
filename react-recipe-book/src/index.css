@@ -73,22 +73,23 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  height: 100vh;
+  
+ 
 }
 .subcontainer {
   display: flex;
   align-content: flex-start;
+
   
 }
 .mainDiv {
   width: 80vw;
   display: flex;
   justify-content:right ;
-  
+
   flex-direction: column;
 }
 .recipeDiv {
-  border: 1px solid black;
   display: flex;
   
   align-items: center;
@@ -132,7 +133,11 @@ button:focus-visible {
   margin:5px;
 }
 
-
+.recipesContainer {
+  width: 80vw;
+  margin-left: 18vw;
+  margin-bottom: 5vh;
+}
 
 
 .search {

@@ -4,24 +4,24 @@ import List from "./components/List";
 import AboutPage from "./pages/AboutPage";
 import ItemDetailsPage from "./pages/ItemDetailsPage";
 import NotFoundPage from "./pages/NotFoundPage";
-
+import NavBar from "./components/NavBar"
 import { Route, Routes } from "react-router-dom";
-
 import React from "react";
 import DashboardPage from "./pages/DashboardPage";
 
 function App() {
+
   return (
     <>
       <div className="container">
         <div className="subcontainer">
-          
+          <NavBar />
           <SideBar />
-          <List />
-        </div>
-        {/* <div>
+          
           <Footer url={`https://github.com/PatriNieto/react-recipe-book.git`} />
-        </div> */}
+        
+        </div>
+        
 
         <Routes>
           <Route path="/" element={<DashboardPage />} />

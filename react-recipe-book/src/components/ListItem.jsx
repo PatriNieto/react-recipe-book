@@ -4,21 +4,21 @@ import React from "react";
 
 
 
-function ListItem({elem, handleDelete}) {
+function ListItem({elem, handleDelete, index}) {
 
   const {name, image, calories, id} = elem
   return (
     
-    <Link to={`/itemdetails/${id}`}>
         <div key={elem.id} className="recipeDiv">
           <h1>{name}</h1>
           <img src={image} alt="recipeFoto" />
           <p>{calories <= 350 ? "✅" : "❌"}</p>
           <button onClick={() => handleDelete(index)}>Erase recipe</button>
+          <Link to={`/itemdetails/${id}`}> 
+            <button>Ver detalles</button>
+          </Link> 
         </div>
-   </Link>
-    
   );
-
 }
+
 export default ListItem;

@@ -1,15 +1,20 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
-import MainSection from '../components/MainSection'
-import Footer from '../components/Footer'
+import List from '../components/List'
+import { useState } from 'react'
+import recipes from "../data/recipes.json"
 
 
 function DashboardPage() {
+  
   return (
     <div>
-        <SideBar />
         
-        <Footer/>
+        
+        <List/>
+        
+    
+        
     </div>
   )
 }

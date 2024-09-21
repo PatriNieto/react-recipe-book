@@ -14,8 +14,11 @@ function ListItem({elem, handleDelete, index}) {
           <img src={image} alt="recipeFoto" />
           <p>{calories <= 350 ? "✅" : "❌"}</p>
           <button onClick={() => handleDelete(index)}>Erase recipe</button>
-          <Link to={`/itemdetails/${id}`}> 
+          <Link 
+          to={`/itemdetails/${id}`
+          }> 
             <button>Ver detalles</button>
+            
           </Link> 
         </div>
   );

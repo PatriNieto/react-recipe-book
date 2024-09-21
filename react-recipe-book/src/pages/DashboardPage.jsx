@@ -6,13 +6,18 @@ import recipes from "../data/recipes.json"
 import AddForm from '../components/AddForm'
 
 
-function DashboardPage() {
+function DashboardPage(props) {
+  const { recipesNuestro, setRecipesNuestro, handleDelete } = props;
   
   return (
     <div>
-        <AddForm/>
+       
         
-        <List/>
+        <List
+        recipesNuestro={recipesNuestro}
+        handleDelete={handleDelete} 
+        setRecipesNuestro = {setRecipesNuestro}
+        />
         
     
         

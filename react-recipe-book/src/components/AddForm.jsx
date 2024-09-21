@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
 function AddForm(props) {
-  const { recipesNuestro, setRecipesNuestro } = props;
+  
+  
   const randomId = Math.random().toString(36).substring(2, 12);
   const [recipeNameValue, setRecipeNameValue] = useState("");
   const [recipeImageValue, setRecipeImageValue] = useState("");
   const [recipeCalValue, setRecipeCalValue] = useState(0);
   const [recipeServingsValue, setRecipeServingsValue] = useState(0);
+  const [recipeIdValue, setRecipeIdValue] = useState (randomId)
 
   const handleNameValue = (event) => {
     setRecipeNameValue(event.target.value);
@@ -20,26 +22,41 @@ function AddForm(props) {
     setRecipeCalValue(event.target.value);
   };
 
+  const handleIdValue = (event) => {
+    setRecipeIdValue(randomId)
+  }
   const handleServingsValue = (event) => {
     setRecipeServingsValue(event.target.value);
   };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    let newRecipe = {
+   let newRecipe = {
       name: recipeNameValue,
       id: randomId,
       image: recipeImageValue,
       calories: recipeCalValue,
       servings: recipeServingsValue,
-    };
+    }; 
 
-    setRecipesNuestro((current)   => {
+   /*  let newRecipe = {
+      recipeNameValue, randomId, recipeImageValue, recipeCalValue,recipeServingsValue
+    } */
+
+    
+
+    /*setRecipesNuestro((current)   => {
       let clone = [...current];
       clone.unshift(newRecipe);
       return clone;
     });
-  };
+    */
+    //adding the product
+    props.addNewRecipe(newRecipe)
+
+
+  }
+  
   return (
     <div className="Formulario">
       {/* FORM */}
@@ -49,11 +66,11 @@ function AddForm(props) {
           <label>
             Recipe Name
             <input
-              name="fullName"
+              name="recipeNameValue"
               onChange={handleNameValue}
               value={recipeNameValue}
               type="text"
-              placeholder="Full Name"
+              placeholder="Recipe Name"
             />
           </label>
 
@@ -64,7 +81,7 @@ function AddForm(props) {
               onChange={handleImageValue}
               value={recipeImageValue}
               type="url"
-              placeholder="Profile Image"
+              placeholder="Image"
             />
           </label>
 
@@ -94,8 +111,8 @@ function AddForm(props) {
             ID
             <input
               name="id"
-              readOnly
-              value={randomId}
+              onChange = {handleIdValue}
+              value={recipeIdValue}
               type="string"
               placeholder="Id"
              
@@ -107,8 +124,10 @@ function AddForm(props) {
       </form>
       {/* FORM END */}
 
-      {/* STUDENT LIST */}
-      {recipesNuestro &&
+
+      
+      {/* RECIPE LIST */}
+      {/*{recipesNuestro &&
         recipesNuestro.map((recipe, index) => (
           <div key={index}>
             <h3>{recipe.name}</h3>
@@ -116,7 +135,7 @@ function AddForm(props) {
             <p>Calories: {recipe.calories}</p>
             <p>Servings: {recipe.servings}</p>
           </div>
-        ))}
+        ))}*/}
     </div>
   );
 }

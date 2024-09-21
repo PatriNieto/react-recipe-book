@@ -6,11 +6,11 @@ import {Link, useParams } from 'react-router-dom'
 
 
 
-function ItemDetailsPage() {
+function ItemDetailsPage(props) {
   const {recipeId} = useParams()
-  //console.log(recipeId)
+  //cambiar recipes por updated
   const recipeInformation = recipes.find((eachRecipe) => eachRecipe.id === recipeId )
-
+  console.log(`pedro`, recipes)
   return (
     <div>
         <SideBar />
@@ -18,8 +18,9 @@ function ItemDetailsPage() {
       <div>
 
         {recipeInformation && (
-
+          
           <>
+          {console.log()}
           <h2>Dish</h2>
           <img src={recipeInformation.image} alt="recipeImg" />
           <h3> {recipeInformation.name}</h3>

@@ -1,32 +1,36 @@
 import ListItem from "./ListItem.jsx";
 import { useState } from "react";
 import React from "react";
-import recipes from "../data/recipes.json"
+import AddForm from "./AddForm.jsx";
 
-<<<<<<< HEAD
+
+
+
+
 const List = (props) => {
-  const [recipesNuestro, setRecipe] = useState(recipes)
-=======
-
-const List = () => {
-  const [recipesNuestro, setRecipesNuestro] = useState(recipes)
->>>>>>> f2605933057457a12c1f9d6998b01e94f643be23
+  const {recipesNuestro, setRecipesNuestro, handleDelete} = props
+  //const [updatedRecipesData, setUpdatedRecipesData] = recipesNuestro
   //la funcion va aqui!
  
-  
-
-  const handleDelete = (index) => {
-    const clone = recipesNuestro.slice(0);
-    clone.splice(index, 1);
-    setRecipesNuestro(clone);
-  };
+    const addNewRecipe = (newRecipe) => {
+    const updatedRecipes = [ newRecipe, ...recipesNuestro]
+    //const updatedRecipesData = [newRecipe,...updatedRecipesData]
+    setRecipesNuestro(updatedRecipes)
+    //setUpdatedRecipesData(updatedRecipesData)
+  } 
+ 
+ 
   return (
     <div className="recipesContainer">
 
-     
+      <AddForm
+      addNewRecipe = {addNewRecipe}
+      
+      />
       <h1>Todas las recetas</h1>
       {recipesNuestro.map((elem,index) => (
         <ListItem 
+        key = {elem.id}
         elem={elem} 
         handleDelete={handleDelete}
         index= {index} />

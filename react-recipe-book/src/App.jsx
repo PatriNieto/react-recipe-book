@@ -8,16 +8,19 @@ import NavBar from "./components/NavBar"
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import DashboardPage from "./pages/DashboardPage";
+import { useState } from "react";
+import recipes from "./data/recipes.json"
 
 function App() {
+const [searchValue, setSearchValue] = useState('')
 
   return (
     <>
       <div className="container">
         <div className="subcontainer">
-          <NavBar />
+          <NavBar/>
           <SideBar />
-          
+         
           <Footer url={`https://github.com/PatriNieto/react-recipe-book.git`} />
         
         </div>

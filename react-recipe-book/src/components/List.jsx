@@ -1,12 +1,12 @@
 import ListItem from "./ListItem.jsx";
-import recipes from "../data/recipes.json"
 import { useState } from "react";
 import React from "react";
+import recipes from "../data/recipes.json"
 
-const List = () => {
+const List = (props) => {
   const [recipesNuestro, setRecipe] = useState(recipes)
   //la funcion va aqui!
-  console.log(`maluuuuuuuu1`,recipesNuestro)
+ 
   
 
   const handleDelete = (index) => {

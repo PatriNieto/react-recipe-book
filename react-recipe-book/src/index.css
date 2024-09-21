@@ -86,7 +86,6 @@ button:focus-visible {
   width: 80vw;
   display: flex;
   justify-content:right ;
-
   flex-direction: column;
 }
 .recipeDiv {
@@ -97,11 +96,15 @@ button:focus-visible {
   margin: 5px;
   border-radius: 10px;
   background-color: #ffffff;
-  
+  height: 15vh;
 }
+
 .recipeDiv h1 {
-  width: 20%;
+font-size: 20px;
+width: 20%;
+text-align: center;
 }
+
 .recipeDiv img {
   width: 20%;
 }
@@ -139,6 +142,10 @@ button:focus-visible {
   margin-bottom: 5vh;
 }
 
+.recipesContainer h1{
+  text-align: center;
+}
+
 
 .search {
   margin: auto;
@@ -166,4 +173,12 @@ button:focus-visible {
 
 .footer a{
   color: #ece7e7;
+}
+
+.container-navbar {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 10px;
 }

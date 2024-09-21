@@ -7,10 +7,11 @@ import {Link, useParams } from 'react-router-dom'
 
 
 function ItemDetailsPage(props) {
+  const {recipesNuestro} = props
   const {recipeId} = useParams()
   //cambiar recipes por updated
-  const recipeInformation = recipes.find((eachRecipe) => eachRecipe.id === recipeId )
-  console.log(`pedro`, recipes)
+  const recipeInformation = recipesNuestro.find((eachRecipe) => eachRecipe.id === recipeId )
+  console.log(`pedro`, recipesNuestro)
   return (
     <div>
         <SideBar />

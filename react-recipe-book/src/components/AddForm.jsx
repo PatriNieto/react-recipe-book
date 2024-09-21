@@ -127,7 +127,7 @@ function AddForm(props) {
 
       
       {/* RECIPE LIST */}
-      {/*{recipesNuestro &&
+      {/*recipesNuestro &&
         recipesNuestro.map((recipe, index) => (
           <div key={index}>
             <h3>{recipe.name}</h3>
@@ -135,7 +135,7 @@ function AddForm(props) {
             <p>Calories: {recipe.calories}</p>
             <p>Servings: {recipe.servings}</p>
           </div>
-        ))}*/}
+))}*/}
     </div>
   );
 }

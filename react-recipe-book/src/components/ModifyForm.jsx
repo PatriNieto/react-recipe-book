@@ -68,14 +68,16 @@ function ModifyForm(props) {
   }
   
   return (
-    <div className="Formulario">
+    <div className="formulario">
       {/* FORM */}
       <form onSubmit={handleEditedFormSubmit}>
-        <span>Add a Recipe</span>
+        <span className="addRecipe">Add a Recipe</span>
         <div>
-          <label>
+        
+          <label className="inputsNames">
             Recipe Name
             <input
+            className="inputsForm"
               name="recipeNameValue"
               onChange={handleEditedNameValue}
               value={editedRecipeNameValue}
@@ -83,10 +85,11 @@ function ModifyForm(props) {
               placeholder=""
             />
           </label>
-
-          <label>
+          
+          <label className="inputsNames">
             Recipe Image
             <input
+             className="inputsForm"
               name="image"
               onChange={handleEditedImageValue}
               value={editedRecipeImageValue}
@@ -94,10 +97,11 @@ function ModifyForm(props) {
               placeholder="Image"
             />
           </label>
-
-          <label>
+          
+          <label className="inputsNames">
             Calories
             <input
+            className="inputsForm"
               name="calories"
               onChange={handleEditedCalValue}
               value={editedRecipeCalValue}
@@ -105,10 +109,11 @@ function ModifyForm(props) {
               placeholder=""
             />
           </label>
-
-          <label>
+         
+          <label className="inputsNames">
             Servings
             <input
+            className="inputsForm"
               name="Servings"
               onChange={handleEditedServingsValue}
               value={editedRecipeServingsValue}
@@ -117,21 +122,23 @@ function ModifyForm(props) {
               min={1}
             />
           </label>
-          <label id="recipe-id-hidden">
+          <label id="recipe-id-hidden" 
+          className="inputsNames">
             ID
             <input
+            className="inputsForm"
               name="id"
               onChange = {handleEditedIdValue}
               value={recipeId}
               type="string"
               placeholder="Id"
-             
             />
           </label>
-          
+          <br></br>
           <button type="submit">Save changes</button>
           <Link to={"/"}>
-          <button>Volver</button>
+          <br></br>
+          <button>Back</button>
           </Link>
 
           

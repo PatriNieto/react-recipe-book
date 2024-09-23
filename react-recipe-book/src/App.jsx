@@ -13,7 +13,7 @@ import recipes from "./data/recipes.json"
 import ModifyFormPage from "./pages/ModifyFormPage";
 
 function App() {
-//const [searchValue, setSearchValue] = useState('')
+const [searchValue, setSearchValue] = useState('')
 
 const [recipesNuestro, setRecipesNuestro] = useState(recipes)
 
@@ -49,8 +49,11 @@ const [recipesNuestro, setRecipesNuestro] = useState(recipes)
     <>
       <div className="container">
         <div className="subcontainer">
-          <NavBar/>
-          <SideBar />
+          <NavBar searchValue={searchValue} setSearchValue={setSearchValue}/>
+
+          
+          <SideBar/>
+          
          
           <Footer url={`https://github.com/PatriNieto/react-recipe-book.git`} />
         
@@ -66,6 +69,7 @@ const [recipesNuestro, setRecipesNuestro] = useState(recipes)
           setRecipesNuestro = {setRecipesNuestro}
           addNewRecipe ={addNewRecipe}
           addEditedRecipe = {addEditedRecipe}
+          searchValue={searchValue}
           />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/itemdetails/:recipeId" 

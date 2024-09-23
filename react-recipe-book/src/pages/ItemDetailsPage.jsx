@@ -11,11 +11,10 @@ function ItemDetailsPage(props) {
   const {recipeId} = useParams()
   //cambiar recipes por updated
   const recipeInformation = recipesNuestro.find((eachRecipe) => eachRecipe.id === recipeId )
-  console.log(`pedro`, recipesNuestro)
+  
   return (
     <div>
-        <SideBar />
-        <Footer/>
+        
       <div>
 
         {recipeInformation && (

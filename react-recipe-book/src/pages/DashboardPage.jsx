@@ -7,7 +7,7 @@ import AddForm from '../components/AddForm'
 
 
 function DashboardPage(props) {
-  const { recipesNuestro, setRecipesNuestro, handleDelete } = props;
+  const { recipesNuestro, setRecipesNuestro, handleDelete, addNewRecipe, addEditedRecipe } = props;
   
   return (
     <div>
@@ -17,6 +17,8 @@ function DashboardPage(props) {
         recipesNuestro={recipesNuestro}
         handleDelete={handleDelete} 
         setRecipesNuestro = {setRecipesNuestro}
+        addNewRecipe = {addNewRecipe}
+        addEditedRecipe = {addEditedRecipe}
         />
         
     

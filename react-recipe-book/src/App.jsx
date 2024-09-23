@@ -10,6 +10,7 @@ import React from "react";
 import DashboardPage from "./pages/DashboardPage";
 import { useState } from "react";
 import recipes from "./data/recipes.json"
+import ModifyFormPage from "./pages/ModifyFormPage";
 
 function App() {
 //const [searchValue, setSearchValue] = useState('')
@@ -26,6 +27,21 @@ const [recipesNuestro, setRecipesNuestro] = useState(recipes)
   const updatedRecipes = [ newRecipe, ...recipesNuestro]
   setRecipesNuestro(updatedRecipes)
 }  */
+
+  const addNewRecipe = (newRecipe) => {
+    const updatedRecipes = [ newRecipe, ...recipesNuestro]
+    //const updatedRecipesData = [newRecipe,...updatedRecipesData]
+    setRecipesNuestro(updatedRecipes)
+    //setUpdatedRecipesData(updatedRecipesData)
+  } 
+    const addEditedRecipe = (editedRecipe) => {
+      recipesNuestro.forEach((element, index)=>{
+        element.id === editedRecipe.id && recipesNuestro.splice(index,1,editedRecipe)
+      })
+
+
+
+  }
 
 
 
@@ -48,6 +64,8 @@ const [recipesNuestro, setRecipesNuestro] = useState(recipes)
           recipesNuestro={recipesNuestro}
           handleDelete={handleDelete} 
           setRecipesNuestro = {setRecipesNuestro}
+          addNewRecipe ={addNewRecipe}
+          addEditedRecipe = {addEditedRecipe}
           />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/itemdetails/:recipeId" 
@@ -56,6 +74,12 @@ const [recipesNuestro, setRecipesNuestro] = useState(recipes)
             
             //addNewRecipe = {addNewRecipe} 
             />} />
+          <Route path="/modifyFormPage/:recipeId"  
+          element={<ModifyFormPage 
+            recipesNuestro={recipesNuestro}
+            addEditedRecipe = {addEditedRecipe}
+            />} />
+
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>

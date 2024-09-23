@@ -47,6 +47,8 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  width: 10vw;
+  font-size: 10px;
 }
 button:hover {
   border-color: #646cff;
@@ -181,4 +183,27 @@ text-align: center;
   justify-content: center;
   width: 100vw;
   padding: 10px;
+}
+
+.buttonCont {
+  display: flex;
+  flex-direction: column;
+}
+
+#photo-details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 500px;
+}
+
+a {
+display:block;
+}
+
+.Formulario {
+  text-align: right;
+  width: 60vw;
+  margin-left: 20vw;
 }

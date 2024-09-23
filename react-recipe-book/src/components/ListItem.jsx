@@ -5,8 +5,12 @@ import React from "react";
 
 
 function ListItem({elem, handleDelete, index}) {
+  
 
   const {name, image, calories, id} = elem
+
+
+
   return (
     
         <div key={elem.id} className="recipeDiv">
@@ -17,9 +21,21 @@ function ListItem({elem, handleDelete, index}) {
           <Link 
           to={`/itemdetails/${id}`
           }> 
-            <button>Ver detalles</button>
+            <button>Check Details</button>
             
           </Link> 
+          
+          <Link 
+          to={`/modifyFormPage/${id}`
+          
+          }> 
+          <button>Edit recipe</button>
+
+          </Link>
+
+
+          
+          
         </div>
   );
 }

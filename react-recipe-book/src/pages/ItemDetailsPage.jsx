@@ -13,19 +13,18 @@ function ItemDetailsPage(props) {
   const recipeInformation = recipesNuestro.find((eachRecipe) => eachRecipe.id === recipeId )
   
   return (
-    <div>
+    <div className='detailsPage'>
         
       <div>
 
         {recipeInformation && (
           
           <>
-          {console.log()}
           <h2>Dish</h2>
-          <img src={recipeInformation.image} alt="recipeImg" />
+          <img className='imgDetails' src={recipeInformation.image} alt={recipeInformation.name}/>
           <h3> {recipeInformation.name}</h3>
-          <p> {recipeInformation.calories}</p>
-          <p>{recipeInformation.servings}</p>
+          <p>Calories: {recipeInformation.calories}</p>
+          <p>Servings: {recipeInformation.servings}</p>
           <Link to ="/">
           <button>Back</button>
           </Link>

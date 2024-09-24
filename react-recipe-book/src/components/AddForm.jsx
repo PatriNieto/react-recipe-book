@@ -58,14 +58,15 @@ function AddForm(props) {
   }
   
   return (
-    <div className="Formulario">
+    <div className="formulario">
       {/* FORM */}
+      <span className="addRecipe">Add a Recipe</span>
       <form onSubmit={handleFormSubmit}>
-        <span>Add a Recipe</span>
         <div>
-          <label>
+          <label className="inputsNames">
             Recipe Name
             <input
+            className="inputsForm"
               name="recipeNameValue"
               onChange={handleNameValue}
               value={recipeNameValue}
@@ -74,9 +75,10 @@ function AddForm(props) {
             />
           </label>
 
-          <label>
+          <label className="inputsNames">
             Recipe Image
             <input
+             className="inputsForm"
               name="image"
               onChange={handleImageValue}
               value={recipeImageValue}
@@ -85,9 +87,10 @@ function AddForm(props) {
             />
           </label>
 
-          <label>
+          <label className="inputsNames">
             Calories
             <input
+             className="inputsForm"
               name="calories"
               onChange={handleCalValue}
               value={recipeCalValue}
@@ -96,9 +99,10 @@ function AddForm(props) {
             />
           </label>
 
-          <label>
+          <label className="inputsNames">
             Servings
             <input
+             className="inputsForm"
               name="Servings"
               onChange={handleServingsValue}
               value={recipeServingsValue}
@@ -107,9 +111,10 @@ function AddForm(props) {
               min={1}
             />
           </label>
-          <label id="recipe-id-hidden">
+          <label id="recipe-id-hidden" className="inputsNames">
             ID
             <input
+             className="inputsForm"
               name="id"
               onChange = {handleIdValue}
               value={recipeIdValue}
@@ -118,10 +123,10 @@ function AddForm(props) {
              
             />
           </label>
-
-          <button type="submit">Add Recipe</button>
         </div>
+        <button className="addButton" type="submit">Add Recipe</button>
       </form>
+      
       {/* FORM END */}
 
 

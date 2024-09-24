@@ -5,11 +5,10 @@ import React from "react";
 
 
 function ListItem({elem, handleDelete, index}) {
-  
+ 
 
   const {name, image, calories, id} = elem
-
-
+console.log(elem)
 
   return (
     

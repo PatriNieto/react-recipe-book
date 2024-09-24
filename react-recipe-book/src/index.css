@@ -6,7 +6,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #FE6F61;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,11 +16,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #FE6F61;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #FE6F61;
 }
 
 body {
@@ -44,27 +44,22 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
   width: 10vw;
   font-size: 10px;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #FE6F61;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color:#FE6F61;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #FE6F61;
   }
   button {
     background-color: #f9f9f9;
@@ -75,12 +70,11 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  
  
 }
 .subcontainer {
   display: flex;
-  align-content: flex-start;
+  
 
   
 }
@@ -169,7 +163,6 @@ text-align: center;
   align-items: center;
   width: 100vw;
   position: fixed;
-  bottom: 0;
 }
 
 
@@ -202,8 +195,84 @@ a {
 display:block;
 }
 
-.Formulario {
-  text-align: right;
+.formulario {
+  /*text-align: right;
   width: 60vw;
-  margin-left: 20vw;
+  margin-left: 20vw;*/
+
+}
+
+.navBar {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+.inputNavBar {
+  padding: 5px;
+  width: 30vh;
+  border-radius: 50px;
+  text-align: center;
+  border: 2px solid #eec7a8;
+  box-shadow: 0 0 100px #bd7517;
+  margin: auto;
+  color: #bd7517;
+  background: transparent;
+}
+
+
+.inputsForm {
+  padding: 2px;
+  width: 15vh;
+  border-radius: 50px;
+  text-align: center;
+  border: 2px solid #eec7a8;
+  background-color: #f7ede5;
+  box-shadow: 0 0 100px #bd7517;
+  margin: auto;
+  color: #bd7517;
+  font-size: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.inputsNames {
+color: #FE6F61;
+font-size: 13px;
+}
+
+.addButton {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: transparent;
+  color: #FE6F61;
+  border-radius: 50px;
+  box-shadow: 0 0 100px #bd7517;
+  border: 1px solid #FE6F61 ;
+  width: 15vh;
+  gap: 2rem;
+}
+
+.addRecipe {
+  color: #FE6F61;
+
+}
+
+.detailsPage {
+  text-align: center;
+  color: #FE6F61;
+  width: 400%; 
+  margin: 0 auto;
+  text-align: center; 
+  padding: 20px; 
+}
+
+.imgDetails {
+max-width: 50vh;
+width: 50vh;
 }

@@ -4,23 +4,27 @@ import React from "react";
 
 
 
+
 function ListItem({elem, handleDelete, index}) {
  
 
   const {name, image, calories, id} = elem
-console.log(elem)
+
+  
+
 
   return (
     
         <div key={elem.id} className="recipeDiv">
           <h1>{name}</h1>
-          <img src={image} alt="recipeFoto" />
+          <div>
+          <img src={image} alt="recipeFoto" className="recipeFoto"/>
+          </div>
           <p>{calories <= 350 ? "✅" : "❌"}</p>
-          <button onClick={() => handleDelete(index)}>Erase recipe</button>
           <Link 
           to={`/itemdetails/${id}`
           }> 
-            <button>Check Details</button>
+            Check Details
             
           </Link> 
           
@@ -28,11 +32,12 @@ console.log(elem)
           to={`/modifyFormPage/${id}`
           
           }> 
-          <button>Edit recipe</button>
+          Edit recipe
 
           </Link>
 
 
+          <button onClick={() => handleDelete(index)}>Erase recipe</button>
           
           
         </div>

@@ -1,8 +1,5 @@
 import React from 'react'
 
-
-
-
 function NavBar({ searchValue, setSearchValue }) {
 
   const handleSearchChange = (event) => {
@@ -17,9 +14,8 @@ function NavBar({ searchValue, setSearchValue }) {
         value={searchValue}
         onChange={handleSearchChange}
         type='text'
-        placeholder='Search'
+        placeholder=' 🔍 '
       />
-      <img width="20" height="20" src="https://img.icons8.com/wired/64/FD7E14/search.png" alt="search"/>
     </div>
 
   );

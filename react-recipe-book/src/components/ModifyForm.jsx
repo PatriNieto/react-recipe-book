@@ -49,19 +49,6 @@ function ModifyForm(props) {
       servings: editedRecipeServingsValue,
     }; 
 
-   /*  let newRecipe = {
-      recipeNameValue, randomId, recipeImageValue, recipeCalValue,recipeServingsValue
-    } */
-
-    
-
-    /*setRecipesNuestro((current)   => {
-      let clone = [...current];
-      clone.unshift(newRecipe);
-      return clone;
-    });
-    */
-    //adding the product
     addEditedRecipe(editedRecipe)
 
 

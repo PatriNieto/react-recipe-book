@@ -103,12 +103,11 @@ function AddForm(props) {
             />
           </label>
         </div>
-        <button className="addButton" type="submit">
-          Add Recipe
-        </button>
+        <button className="addButton" type="submit">Add Recipe</button>
       </form>
 
     </div>
+    
   );
 }
 

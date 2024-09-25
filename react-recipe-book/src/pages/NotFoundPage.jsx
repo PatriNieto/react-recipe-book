@@ -10,9 +10,10 @@ function NotFoundPage() {
       <h3>404 en la cocina</h3>
       <p>¡Oh no! No encontramos la receta...</p>
       <p>
-        Parece que algo se quemó en la cocina. No pudimos encontrar la página
-        que buscabas, pero ¡no te preocupes! A veces, incluso los mejores chefs
-        se equivocan.
+        Parece que algo se quemó en la cocina.<br/>
+         No pudimos encontrar la página
+        que buscabas, pero ¡no te preocupes!<br/> 
+        A veces, incluso los mejores chefs se equivocan.
       </p>
 
       <img src={imgChicote} alt="" />

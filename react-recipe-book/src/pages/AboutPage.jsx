@@ -3,14 +3,14 @@ import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import GitHubLogo from "../assets/gitHubLogo2.png"
 import LinkedinLogo from "../assets/linkedinlogo2.png"
+import imageBackGround from '../assets/pexels-photo-952482.jpeg'
 
 
 function AboutPage() {
   return (
     <div className="about">
-   
-      <h1> Meet our chefs! </h1>
       <div className="about-container">
+      <h1> Meet our chefs! </h1>
         <br />
       <h2>Patricia Nieto</h2>
 

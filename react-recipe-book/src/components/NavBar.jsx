@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function NavBar({ searchValue, setSearchValue }) {
 
   const handleSearchChange = (event) => {
@@ -14,12 +15,10 @@ function NavBar({ searchValue, setSearchValue }) {
         value={searchValue}
         onChange={handleSearchChange}
         type='text'
-        placeholder=' 🔍 '
+        placeholder='🔍 '
       />
     </div>
-
-  );
-
+ );
 
 }
 

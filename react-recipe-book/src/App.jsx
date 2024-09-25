@@ -55,6 +55,7 @@ function App() {
                 addNewRecipe={addNewRecipe}
                 addEditedRecipe={addEditedRecipe}
                 searchValue={searchValue}
+                setSearchValue={setSearchValue}
               />
             }
           />

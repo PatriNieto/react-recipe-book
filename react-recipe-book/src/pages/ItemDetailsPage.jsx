@@ -27,7 +27,7 @@ function ItemDetailsPage(props) {
             <p>Calories: {recipeInformation.calories}</p>
             <p>Servings: {recipeInformation.servings}</p>
             <Link to="/">
-              <button>Back</button>
+              <button className="backButton">Back</button>
             </Link>
           </>
         )}

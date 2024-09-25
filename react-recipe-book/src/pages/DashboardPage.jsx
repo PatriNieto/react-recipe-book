@@ -13,6 +13,7 @@ function DashboardPage(props) {
     addNewRecipe,
     addEditedRecipe,
     searchValue,
+    setSearchValue
   } = props;
 
   return (
@@ -24,6 +25,7 @@ function DashboardPage(props) {
         addNewRecipe={addNewRecipe}
         addEditedRecipe={addEditedRecipe}
         searchValue={searchValue}
+        setSearchValue={setSearchValue}
       />
     </div>
   );

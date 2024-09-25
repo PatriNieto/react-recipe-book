@@ -4,16 +4,12 @@ import { useState } from 'react';
 
 
 function ModifyForm(props) {
-  const {recipeId} = useParams()
-  const {addEditedRecipe, recipesNuestro} = props
+  const { recipeId } = useParams()
+  const { addEditedRecipe, recipesNuestro } = props
 
-  const recipeInformation = recipesNuestro.find((eachRecipe) => eachRecipe.id === recipeId )
+  const recipeInformation = recipesNuestro.find((eachRecipe) => eachRecipe.id === recipeId)
 
 
-
-  //const {recipeNameValue, recipeImageValue, recipeCalValue,recipeServingsValue,recipeIdValue} = recipesNuestro
-  console.log(recipeInformation.name)
-  
   const [editedRecipeNameValue, setEditedRecipeNameValue] = useState(recipeInformation.name);
   const [editedRecipeImageValue, setEditedRecipeImageValue] = useState(recipeInformation.image);
   const [editedRecipeCalValue, setEditedRecipeCalValue] = useState(recipeInformation.calories);
@@ -41,42 +37,43 @@ function ModifyForm(props) {
 
   const handleEditedFormSubmit = (event) => {
     event.preventDefault();
-   let editedRecipe = {
+    console.log(`submite?`)
+    let editedRecipe = {
       name: editedRecipeNameValue,
       id: editedRecipeIdValue,
       image: editedRecipeImageValue,
       calories: editedRecipeCalValue,
       servings: editedRecipeServingsValue,
-    }; 
+    };
 
     addEditedRecipe(editedRecipe)
 
 
   }
-  
+
   return (
-    <div className="formulario">
+    <div className='edite'>
       {/* FORM */}
-      <form onSubmit={handleEditedFormSubmit}>
+      <form className='formEdited' onSubmit={handleEditedFormSubmit}>
         <span className="addRecipe">Add a Recipe</span>
         <div>
-        
+          <br />
           <label className="inputsNames">
             Recipe Name
             <input
-            className="inputsForm"
+              className="inputsForm"
               name="recipeNameValue"
               onChange={handleEditedNameValue}
               value={editedRecipeNameValue}
               type="text"
-              placeholder=""
+              placeholder="Name"
             />
           </label>
-          
+
           <label className="inputsNames">
             Recipe Image
             <input
-             className="inputsForm"
+              className="inputsForm"
               name="image"
               onChange={handleEditedImageValue}
               value={editedRecipeImageValue}
@@ -84,11 +81,11 @@ function ModifyForm(props) {
               placeholder="Image"
             />
           </label>
-          
+
           <label className="inputsNames">
             Calories
             <input
-            className="inputsForm"
+              className="inputsForm"
               name="calories"
               onChange={handleEditedCalValue}
               value={editedRecipeCalValue}
@@ -96,11 +93,11 @@ function ModifyForm(props) {
               placeholder=""
             />
           </label>
-         
+
           <label className="inputsNames">
             Servings
             <input
-            className="inputsForm"
+              className="inputsForm"
               name="Servings"
               onChange={handleEditedServingsValue}
               value={editedRecipeServingsValue}
@@ -109,33 +106,33 @@ function ModifyForm(props) {
               min={1}
             />
           </label>
-          <label id="recipe-id-hidden" 
-          className="inputsNames">
+          <label id="recipe-id-hidden"
+            className="inputsNames">
             ID
             <input
-            className="inputsForm"
+              className="inputsForm"
               name="id"
-              onChange = {handleEditedIdValue}
+              onChange={handleEditedIdValue}
               value={recipeId}
               type="string"
               placeholder="Id"
             />
           </label>
-          <br></br>
-          <button type="submit">Save changes</button>
+          <br /><br />
+          <button className="backButton" type="submit">Save</button>
           <Link to={"/"}>
-          <br></br>
-          <button>Back</button>
+            <br></br>
+            <button className="backButton">Back</button>
           </Link>
 
-          
+
         </div>
       </form>
-      
 
 
-      
- 
+
+
+
     </div>
   );
 

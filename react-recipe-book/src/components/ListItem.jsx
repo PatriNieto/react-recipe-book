@@ -14,7 +14,6 @@ function ListItem({elem, handleDelete, index}) {
 
 
   return (
-    
         <div key={elem.id} className="recipeDiv">
           <h1>{name}</h1>
           <div>
@@ -36,11 +35,12 @@ function ListItem({elem, handleDelete, index}) {
 
           </Link>
 
-
-          <button onClick={() => handleDelete(index)}>Erase recipe</button>
+          <button className="eraseRecipeButton" onClick={() => handleDelete(index)}>Erase recipe</button>
+         
           
           
         </div>
+        
   );
 }
 

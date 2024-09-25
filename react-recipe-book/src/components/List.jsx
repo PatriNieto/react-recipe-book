@@ -47,7 +47,7 @@ const List = (props) => {
           />
         ));
       } else {
-        return <p style={{ color: "#FE6F61" }}>No recipes found</p>;
+        return <p style={{ color: "#FE6F61", textAlign: 'center' }}>No recipes found</p>;
       }
     }
   };
@@ -58,7 +58,7 @@ const List = (props) => {
     
     <div className="recipesContainer addrecipe">
       <AddForm addNewRecipe={addNewRecipe} />
-      <h1>All our recipes</h1>
+      <h1 className="allOurRecipes">All our recipes</h1>
       {renderRecipes()}
     </div>
     </>
